@@ -7,10 +7,15 @@ const express = require("express");
 const routes = express.Router();
 
 const alunoController = require("./constrollers/aluno");
+const postagemController = require("./constrollers/postagem");
 
-// rota para cadastro 
+// rotas de usuario 
 routes.get("/alunos/:id", alunoController.buscarPorId);
 routes.get("/alunos", alunoController.listar);
 routes.post("/alunos", alunoController.store);
+
+// rotas de postagem 
+routes.post("/postagens", postagemController.store);
+routes.delete("/postagens/:id", postagemController.detete);
 
 module.exports = routes;

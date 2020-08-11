@@ -11,5 +11,8 @@ class Aluno extends Model {
             sequelize,
         })
     }
+    static associate(models) {
+        this.hasMany(models.postagens, { foreignKey: "created_aluno_id" });
+    }
 }
 module.exports = Aluno;
