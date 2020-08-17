@@ -9,11 +9,12 @@ class Postagem extends Model {
             gists: DataTypes.TEXT,
         }, {
             sequelize,
-            modelName: "postagens",
+            tableName: "postagens",
         });
     }
     static associate(models) {
         this.belongsTo(models.Aluno, { foreignKey: "created_aluno_id" });
+        this.hasMany(models.Comentario);
     }
 }
 module.exports = Postagem;
