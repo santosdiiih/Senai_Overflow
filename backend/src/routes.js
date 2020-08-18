@@ -1,3 +1,6 @@
+// link para download das request :
+//   https://www.getpostman.com/collections/1988f3c4f230c4788dbe
+
 // esse arquivo tem como responsbilidade de cadastrar as rotas
 
 // importando o express 
